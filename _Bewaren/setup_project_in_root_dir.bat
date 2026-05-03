@@ -4,8 +4,8 @@ echo Project wordt opgezet...
 echo ================================
 
 REM Root
-mkdir project-root
-cd project-root
+REM mkdir project-root
+REM cd project-root
 
 REM ================================
 REM MAPPENSTRUCTUUR
@@ -147,4 +147,11 @@ echo .card { background:#f4f4f4; padding:15px; margin:10px 0; } >> public\css\ma
 echo ================================
 echo Klaar! Project is aangemaakt.
 echo ================================
+
+rem =================================
+rem verder zijn er tbv. van GITHUB de dir.git/ en de sub dir:
+rem hooks, info, logs, objects, refs en dieverse (7 stuks) bestanden, commit_editmsg, config, description, fetsch_head, head, indes en orig_head
+rem de dir .github/ met sub dir workflows met het bestand: deploy.yml
+
+rem =================================
 pause
