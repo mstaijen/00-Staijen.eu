@@ -15,10 +15,10 @@ jobs:
       - name: SFTP Deploy
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: 570486777.ssh.w1.strato.hosting
+          server:  ssh.rzone.de
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASSWORD }}
           port: 22
           local_path: "./"
-          remote_path: "/htdocs/"
-          exclude: ".git*,node_modules"
+          remote_path: "//"
+          
