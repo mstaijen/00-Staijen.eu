@@ -1,7 +1,9 @@
 <?php
 
 $config = require __DIR__ . '/config.php';
-$db = $config['db'];
+
+$env = $config['env'];
+$db  = $config['db'][$env];
 
 $dsn = "mysql:host={$db['host']};dbname={$db['name']};charset=utf8mb4";
 
@@ -11,11 +13,8 @@ try {
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
     ]);
 
-    // ✅ succesmelding (tijdelijk voor debug)
-    echo "<p style='color:green;'>✅ Database connectie GELUKT</p>";
+    echo "<p style='color:green;'>✅ Database verbonden ($env)</p>";
 
 } catch (PDOException $e) {
-
-    // ❌ foutmelding (met reden)
-    die("<p style='color:red;'>❌ Database connectie MISLUKT: " . $e->getMessage() . "</p>");
+    die("<p style='color:red;'>❌ Database fout ($env): " . $e->getMessage() . "</p>");
 }

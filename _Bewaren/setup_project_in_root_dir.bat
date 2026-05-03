@@ -150,7 +150,7 @@ echo ================================
 
 rem =================================
 rem verder zijn er tbv. van GITHUB de dir.git/ en de sub dir:
-rem hooks, info, logs, objects, refs en dieverse (7 stuks) bestanden, commit_editmsg, config, description, fetsch_head, head, indes en orig_head
+rem hooks, info, logs, objects, refs en diverse (7 stuks) bestanden, commit_editmsg, config, description, fetsch_head, head, indes en orig_head
 rem de dir .github/ met sub dir workflows met het bestand: deploy.yml
 
 rem =================================

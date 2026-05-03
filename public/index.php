@@ -1,15 +1,5 @@
-<?php
-require_once '../config/config.php';
-require_once '../includes/auth.php';
-?>
+<?php include '../includes/header.php'; ?>
 
-<h1><?= APP_NAME ?></h1>
+<h2>Welkom</h2>
 
-<p>Welkom in het FamiliePortaal</p>
-
-<ul>
-    <li><a href="modules/muziek/index.php">🎵 Muziek</a></li>
-    <li><a href="modules/puzzels/index.php">🧩 Puzzels</a></li>
-    <li><a href="modules/gereedschap/index.php">🔧 Gereedschap</a></li>
-    <li><a href="dashboard.php">📊 Dashboard</a></li>
-</ul>
+<?php include '../includes/footer.php'; ?>

@@ -1,6 +1,8 @@
-</main> 
-<footer> 
-<p>&copy; 2026 Gezins Systeem</p> 
-</footer> 
-</body> 
-</html> 
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025-<?= date('Y'); ?> <?= $config['app_name']; ?></p>
+</footer>
+
+</body>
+</html>
