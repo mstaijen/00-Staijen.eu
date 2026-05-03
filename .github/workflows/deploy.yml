@@ -10,15 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Deploy via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ssh.strato.com
+          host: ssh.strato.com
           username: staijen.eu
           password: ${{ secrets.SFTP_PASSWORD }}
           port: 22
-          local_path: ./
-          remote_path: /
+          source: "."
+          target: "/staijen"
