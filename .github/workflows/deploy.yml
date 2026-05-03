@@ -1,24 +1,24 @@
-name: Deploy to Strato via SFTP
+name: Deploy to Strato
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: SFTP Deploy
+      - name: Deploy via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server:  ssh.rzone.de
-          username: ${{ secrets.SFTP_USER }}
+          server: ssh.strato.com
+          username: staijen.eu
           password: ${{ secrets.SFTP_PASSWORD }}
           port: 22
-          local_path: "./"
-          remote_path: "//"
-          
+          local_path: ./
+          remote_path: /staijen
