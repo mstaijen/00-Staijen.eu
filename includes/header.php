@@ -1,8 +1,15 @@
 <?php
-$config = require __DIR__ . '/../config/config.php';
-
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
+}
+
+$username = $_SESSION['username'] ?? 'Gast';
+$role     = $_SESSION['role'] ?? '';
+$isLogged = isset($_SESSION['user_id']);
+
+// BELANGRIJK: vaste base url
+if (!defined('BASE_URL')) {
+    define('BASE_URL', '/projecten/00-Staijen.eu');
 }
 ?>
 
@@ -10,49 +17,45 @@ if (session_status() === PHP_SESSION_NONE) {
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title><?= $config['app_name']; ?></title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>FamiliePortaal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GLOBAL CSS -->
+    <link rel="stylesheet" href="<?= BASE_URL ?>/public/css/style.css">
+
 </head>
 
 <body>
 
-<header class="header">
+<header class="site-header">
 
-    <!-- LINKS: LOGO -->
     <div class="header-left">
-        <div class="logo">
-            LOGO
-        </div>
+        <h1>FamiliePortaal</h1>
     </div>
 
-    <!-- RECHTS -->
+    <div class="header-center">
+        <?php if ($isLogged): ?>
+            Welkom, <strong><?= htmlspecialchars($username) ?></strong>
+        <?php else: ?>
+            Welkom, gast
+        <?php endif; ?>
+    </div>
+
     <div class="header-right">
-
-        <!-- RIJ 1: TITEL -->
-        <div class="header-title">
-            <?= $config['app_name']; ?>
-        </div>
-
-        <!-- RIJ 2: MENU + LOGOUT -->
-        <div class="header-nav">
-
-            <nav class="menu">
-                <a href="index.php">Home</a>
-                <a href="dashboard.php">Dashboard</a>
-                <a href="modules/muziek/index.php">Muziek</a>
-                <a href="modules/puzzels/index.php">Puzzels</a>
-                <a href="modules/gereedschap/index.php">Gereedschap</a>
-            </nav>
-
-            <div class="logout">
-                <?php if (isset($_SESSION['user_id'])): ?>
-                    <a href="logout.php">Uitloggen</a>
-                <?php endif; ?>
-            </div>
-
-        </div>
+        <?php if ($isLogged): ?>
+            Rol: <strong><?= htmlspecialchars($role) ?></strong> |
+            <a href="<?= BASE_URL ?>/public/logout.php">Logout</a>
+        <?php endif; ?>
     </div>
 
 </header>
 
-<main class="main">
+<nav class="main-nav">
+    <a href="<?= BASE_URL ?>/public/index.php">Home</a>
+    <a href="<?= BASE_URL ?>/modules/muziek/index.php">Muziek</a>
+    <a href="<?= BASE_URL ?>/modules/puzzels/index.php">Puzzels</a>
+    <a href="<?= BASE_URL ?>/modules/gereedschap/index.php">Gereedschap</a>
+    <a href="<?= BASE_URL ?>/modules/stamboom/index.php">Stamboom</a>
+</nav>
+
+<main class="content">

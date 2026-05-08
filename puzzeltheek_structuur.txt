@@ -1,0 +1,319 @@
+Folder PATH listing
+Volume serial number is 3EF5-901F
+C:\XAMPP\HTDOCS\PROJECTEN\03-PUZZELTHEEK.STAIJEN.EU\PUZZELTHEEK_V_1_6 (PROD)
+¦   config.php
+¦   config.php(prod)
+¦   eigenaar.php
+¦   footer.php
+¦   formulier.php
+¦   gebruikers_beheer.php
+¦   gebruikers_edit.php
+¦   gebruikers_update.php
+¦   gebruiker_bewerken.php
+¦   header (werkend).php
+¦   header.php
+¦   index.php
+¦   login.php
+¦   logout.php
+¦   puzzels_overzicht.php
+¦   puzzels_overzicht.php.oud
+¦   puzzel_actie.php1
+¦   puzzel_edit_data.php
+¦   puzzel_stamkaart.php
+¦   puzzel_toevoegen.php
+¦   puzzel_verwijderen.php
+¦   slideshow.js
+¦   slideshow.php
+¦   uitgever.php
+¦   update_puzzel_afbeelding.php
+¦   update_script.php
+¦   wachtwoord_reset.php
+¦   wachtwoord_vergeten.php
+¦   wachtwoord_wijzigen.php
+¦   
++---css
++---database
+¦       dbs15496120- local.sql
+¦       dbs15496120.sql
+¦       
++---docs
+¦       Gebruikershandleiding_v1.6.docx
+¦       Puzzeltheek_Handleiding_v1.6.docx
+¦       
++---img
+¦   ¦   logo.gif
+¦   ¦   placeholder.png
+¦   ¦   puzzel_onderhoud.gif
+¦   ¦   puzzel_onderhoud.png
+¦   ¦   
+¦   +---puzzels
+¦       ¦   100_dias_de_los_mortos-jan_van_haasteren.jpg
+¦       ¦   101_waterglijbaan_gekte-jan_van_haasteren_-_junior.jpg
+¦       ¦   102_de_manege-jan_van_haasteren_-_junior.jpg
+¦       ¦   10_letter_for_santa-king.jpg
+¦       ¦   11_bbq_feest__de_food_truck-jan_van_haasteren.jpg
+¦       ¦   12_animal_world-king.jpg
+¦       ¦   13_cruise-king.jpg
+¦       ¦   14_darts-jan_van_haasteren.jpg
+¦       ¦   16_las_vegas-king.jpg
+¦       ¦   1776339123_Zeepkisten race - Jan van Haasteren.jpg
+¦       ¦   1776345681_de Artiest - Jan van Haasteren.png
+¦       ¦   1776350074_Aan de lopende band - Jan van Haasteren.jpg
+¦       ¦   1776350383_b345fe0e.png
+¦       ¦   1776498668_2ccad9db.jpg
+¦       ¦   17_parijs-king.jpg
+¦       ¦   20_amsterdam_king_s_day-king.jpg
+¦       ¦   24_fire_station-jan_van_haasteren.jpg
+¦       ¦   26_cottage_collection-king.jpg
+¦       ¦   27_cottage_pub-king.jpg
+¦       ¦   28_dolomites_kollfusch-king.jpg
+¦       ¦   30_de_winterspelen-jan_van_haasteren.jpg
+¦       ¦   31_antwerpen-ravensburger.jpg
+¦       ¦   32_brussel-ravensburger.jpg
+¦       ¦   33_hubo_jubileum_puzzel-hubo.jpg
+¦       ¦   34_grand_prix-jan_van_haasteren.jpg
+¦       ¦   36_nachtwacht-ravensburger.jpg
+¦       ¦   39_classic_puzzelcollection-king.jpg
+¦       ¦   40_amsterdam-king.jpg
+¦       ¦   41_poffertjeskraam-anton_pieck.jpg
+¦       ¦   42_de_kruidenier-anton_pieck.jpg
+¦       ¦   43_kamperen_in_het_bos-jan_van_haasteren.jpg
+¦       ¦   47_de_bakkerij-jan_van_haasteren.jpg
+¦       ¦   4_noach_s_ark-jumbo.jpg
+¦       ¦   52_montmartre_sacre_coeur-castorland_puzzels.jpg
+¦       ¦   55_happy_bingo-wasgij_mystery.jpg
+¦       ¦   56_de_hondenshow-jan_van_haasteren.jpg
+¦       ¦   57_in_het_fitness-centrum-jan_van_haasteren.jpg
+¦       ¦   58_camping_chaos-jan_van_haasteren.jpg
+¦       ¦   59_tour_de_france-jan_van_haasteren.jpg
+¦       ¦   5_aan_de_lopende_band-jan_van_haasteren.jpg
+¦       ¦   61_de_storm___safarie-jan_van_haasteren.jpg
+¦       ¦   63_de_motorrace-jan_van_haasteren.jpg
+¦       ¦   64_carnaval_-_limited_edition_2-jan_van_haasteren.jpg
+¦       ¦   66_biljarten_-_limited_edition_3-jan_van_haasteren.jpg
+¦       ¦   67_biljarten_-_oldtimers-jan_van_haasteren.jpg
+¦       ¦   69_keuken-king__that_s_life.jpg
+¦       ¦   6_aan_de_lopende_band-jan_van_haasteren.jpg
+¦       ¦   70_kerstman-king__that_s_life.jpg
+¦       ¦   71_piccadilly_circus-king__comic.jpg
+¦       ¦   73_disney_land_parijs-disneyland.jpg
+¦       ¦   74_looping_louie-hasbro.jpg
+¦       ¦   76_paard_in_de_wei-ravensburger.jpg
+¦       ¦   78_jumbo.jpg
+¦       ¦   80_hubo_jubileum_puzzel-hubo.jpg
+¦       ¦   81_300_jaar_raalte-jumbo.jpg
+¦       ¦   82_300_jaar_raalte-jumbo.jpg
+¦       ¦   82_amsterdam-ravensburger.jpg
+¦       ¦   82_jumbo.jpg
+¦       ¦   83_brand_meester-jan_van_haasteren.jpg
+¦       ¦   84_boomtown_berlijn-king.jpg
+¦       ¦   85_christmas_fair-king.jpg
+¦       ¦   86_christmas_house-king.jpg
+¦       ¦   87_christmas_village-king.jpg
+¦       ¦   88_hof_van_twente-jumbo.jpg
+¦       ¦   8_feyenoord_stadion-feyenoord.jpg
+¦       ¦   98_adventskalender-jan_van_haasteren.jpg
+¦       ¦   9_de_ijffeltoren-fluoriseren.jpg
+¦       ¦   De_ambachtelijke_brouwerij_-_Jan_van_Haasteren.jpg
+¦       ¦   test_Castorland_Puzzels.jpg
+¦       ¦   
+¦       +---Nieuwe map
+¦               1776083389_Aan de lopende band - Jan van Haasteren.jpg
+¦               300 jaar Raalte.jpg
+¦               Aan de lopende band - Jan van Haasteren.jpg
+¦               Adventskalender.png
+¦               Amsterdam (King's day) - King.jpg
+¦               Animal world - King.jpg
+¦               Anton Pieck de kruidenier.png
+¦               Antwerpen - Ravensburger.png
+¦               Arc van Noah - Jumbo.png
+¦               BBQ feest & Food truck - Jan van Haasteren.jpg
+¦               Biljarten  oldtimer - Jan van Haasteren.jpg
+¦               Biljarten - Jan van Haasteren (Limited edition 3).png
+¦               Boomtown Berlin - King.jpg
+¦               Brand meester - Jan van Haasteren.jpg
+¦               Brussel - Ravensburger.png
+¦               Carnaval - Limited edition 2.png
+¦               Casino - Limited edition 1.png
+¦               Christmas fair - King.jpg
+¦               Christmas house - King.jpg
+¦               Christmas village - King.jpg
+¦               Classic-Collection-Posters-5x1000-Stukjes.jpg
+¦               Cottage collection - King.png
+¦               Cottage pub - King.png
+¦               Cruise - King.jpg
+¦               Darts - Jan van Haasteren.png
+¦               De ambachtelijke brouwerij - Jan van Haasteren.jpg
+¦               de Artiest - Jan van Haasteren.png
+¦               De Bakkerij - Jan van Haasteren.jpg
+¦               De echte TEXEL puzzel.jpg
+¦               De Hondenshow - Jan van Haasteren.jpg
+¦               De Kruidenier - Anton Pieck.jpg
+¦               De motorrace - Jan van Haasteren.jpg
+¦               De storm & Safarie - Jan van Haasteren.png
+¦               Dias de los Mortos  - Jan van Haasteren.jpg
+¦               Dias_de_los_Mortos_-_Jan_van_Haasteren.jpg
+¦               Disneyland Parijs - Panorama.jpg
+¦               Dolmites kollfusch - King.png
+¦               Feyenoord.png
+¦               Fire station - Jan van Haasteren.jpg
+¦               Fire station - Jan van Haasteren.png
+¦               Forrest Cottage.png
+¦               Grand Prix - Kan van Haasteren.jpg
+¦               Happy Bingo -  Wasgij.jpg
+¦               Het dorp van de Kerstman.jpg
+¦               Hockey kampioenschappen.jpg
+¦               Hoera Nijntje 50 jaar.jpg
+¦               Hof van Twente - JUMBO.jpg
+¦               Hondenshow - Jan van Haasteren.jpg
+¦               Hubo Jubileum puzzel - Hubo.jpg
+¦               In het firnesscentrum - Jan van Haasteren.jpg
+¦               Jelte.jpg
+¦               Kamperen in het Bos - Jan van Haasteren.png
+¦               Kerst man -  That's life.png
+¦               Keuken - That's life.png
+¦               King's day - King.jpg
+¦               Las Vegas - King.jpg
+¦               Las Vegas.jpg
+¦               Letter fron Santa.png
+¦               logo.gif
+¦               Loopinglouie - MB Hasbro.jpg
+¦               Montmartre Sacre Coeur - Castorland.png
+¦               Nachtwacht - Rijksmuseum.jpg
+¦               Noach's Ark.png
+¦               Parijs - King.jpg
+¦               Paris.jpg
+¦               Park, Casino, Biljart.png
+¦               Piccadilly Circus - King Comic.png
+¦               Poffertjeskraam.png
+¦               Pole position - King.jpg
+¦               Pole position.jpg
+¦               Puzzel Rijksmuseum.jpg
+¦               puzzel_69dc96b217d9e8.49431714.jpg
+¦               puzzel_69dc9995718be4.48361317.jpg
+¦               puzzel_69dc99e0714fa4.83431158.jpg
+¦               puzzel_69dc9bc8885ad4.24213442.jpg
+¦               Safri, de storm.jpg
+¦               Sanquin bloedbank.png
+¦               Santa Express - Jan van Haasteren.png
+¦               Santa playing outside - King.jpg
+¦               Santa Polar Express - Jan van Haasteren.jpg
+¦               Santa Polar Express - king.jpg
+¦               Santa's gifts - King.jpg
+¦               Santa's train  - King.jpg
+¦               Santa's workshop - King.jpg
+¦               Sinterklaas pakjesavonde.png
+¦               Soccer stadium - King.jpg
+¦               StreetArt - Jan van Haasteren.jpg
+¦               test_-_Jan_van_Haasteren.jpg
+¦               Time square - King.jpg
+¦               Top 200 puzzel - Denksport.png
+¦               Top2000-gelegd.jpg
+¦               Top2000.jpg
+¦               Tower Bridge King.png
+¦               Uitverkoop - Jan van Haasteren.png
+¦               USS Forrestal - KIng puzzel.png
+¦               Van harte beterschap - Jan van Haasteren.png
+¦               van Onderen Jan van Haasteren .jpg
+¦               Veldrijden - Jan van Haasteren.png
+¦               Venetie - King.jpg
+¦               Vertrekhal  - Jan van Haasteren.jpg
+¦               Volkstuintjes - Jan van Haasteren .png
+¦               Vrijdag de 13e - Jan van Haasteren.jpg
+¦               Westminster Abbey - Castorland.png
+¦               Winter fair - King.jpg
+¦               Winter fun - King.jpg
+¦               Winterspelen - Jan van Haasteren.jpg
+¦               Zeepkisten race - Jan van Haasteren.jpg
+¦               
++---informatie
+¦       Nieuw - Text Document.txt
+¦       PHPMailer-master.zip
+¦       puzzeltheek_fixed.zip
+¦       testmail.php
+¦       
++---onderhoud
+¦   ¦   index.php
+¦   ¦   
+¦   +---img
+¦           puzzel_onderhoud.gif
+¦           puzzel_onderhoud.png
+¦           
++---PHPMailer
+    ¦   COMMITMENT
+    ¦   composer.json
+    ¦   get_oauth_token.php
+    ¦   LICENSE
+    ¦   README.md
+    ¦   SECURITY.md
+    ¦   SMTPUTF8.md
+    ¦   VERSION
+    ¦   
+    +---language
+    ¦       phpmailer.lang-af.php
+    ¦       phpmailer.lang-ar.php
+    ¦       phpmailer.lang-as.php
+    ¦       phpmailer.lang-az.php
+    ¦       phpmailer.lang-ba.php
+    ¦       phpmailer.lang-be.php
+    ¦       phpmailer.lang-bg.php
+    ¦       phpmailer.lang-bn.php
+    ¦       phpmailer.lang-ca.php
+    ¦       phpmailer.lang-cs.php
+    ¦       phpmailer.lang-da.php
+    ¦       phpmailer.lang-de.php
+    ¦       phpmailer.lang-el.php
+    ¦       phpmailer.lang-eo.php
+    ¦       phpmailer.lang-es.php
+    ¦       phpmailer.lang-et.php
+    ¦       phpmailer.lang-fa.php
+    ¦       phpmailer.lang-fi.php
+    ¦       phpmailer.lang-fo.php
+    ¦       phpmailer.lang-fr.php
+    ¦       phpmailer.lang-gl.php
+    ¦       phpmailer.lang-he.php
+    ¦       phpmailer.lang-hi.php
+    ¦       phpmailer.lang-hr.php
+    ¦       phpmailer.lang-hu.php
+    ¦       phpmailer.lang-hy.php
+    ¦       phpmailer.lang-id.php
+    ¦       phpmailer.lang-it.php
+    ¦       phpmailer.lang-ja.php
+    ¦       phpmailer.lang-ka.php
+    ¦       phpmailer.lang-ko.php
+    ¦       phpmailer.lang-ku.php
+    ¦       phpmailer.lang-lt.php
+    ¦       phpmailer.lang-lv.php
+    ¦       phpmailer.lang-mg.php
+    ¦       phpmailer.lang-mn.php
+    ¦       phpmailer.lang-ms.php
+    ¦       phpmailer.lang-nb.php
+    ¦       phpmailer.lang-nl.php
+    ¦       phpmailer.lang-pl.php
+    ¦       phpmailer.lang-pt.php
+    ¦       phpmailer.lang-pt_br.php
+    ¦       phpmailer.lang-ro.php
+    ¦       phpmailer.lang-ru.php
+    ¦       phpmailer.lang-si.php
+    ¦       phpmailer.lang-sk.php
+    ¦       phpmailer.lang-sl.php
+    ¦       phpmailer.lang-sr.php
+    ¦       phpmailer.lang-sr_latn.php
+    ¦       phpmailer.lang-sv.php
+    ¦       phpmailer.lang-tl.php
+    ¦       phpmailer.lang-tr.php
+    ¦       phpmailer.lang-uk.php
+    ¦       phpmailer.lang-ur.php
+    ¦       phpmailer.lang-vi.php
+    ¦       phpmailer.lang-zh.php
+    ¦       phpmailer.lang-zh_cn.php
+    ¦       
+    +---src
+            DSNConfigurator.php
+            Exception.php
+            OAuth.php
+            OAuthTokenProvider.php
+            PHPMailer.php
+            POP3.php
+            SMTP.php
+            

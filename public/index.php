@@ -1,5 +1,13 @@
-<?php include '../includes/header.php'; ?>
+<?php
+require_once __DIR__ . '/../config/bootstrap.php';
 
-<h2>Welkom</h2>
+include BASE_PATH . '/includes/header.php';
+?>
 
-<?php include '../includes/footer.php'; ?>
+
+<main class="content">
+    <?php include BASE_PATH . '/public/dashboard.php'; ?>
+</main>
+
+
+<?php include BASE_PATH . '/includes/footer.php'; ?>

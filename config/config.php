@@ -1,5 +1,7 @@
 <?php
-define('APP_NAME', 'FamiliePortaal');
+if (!defined('APP_NAME')) {
+    define('APP_NAME', 'FamiliePortaal');
+}
 return [
     'app_name' => 'FamiliePortaal',
 

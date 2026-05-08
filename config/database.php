@@ -1,6 +1,8 @@
 <?php
 
-$config = require __DIR__ . '/config.php';
+if (!isset($config)) {
+    $config = require __DIR__ . '/config.php';
+}
 
 $env = $config['env'];
 $db  = $config['db'][$env];
@@ -12,9 +14,6 @@ try {
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
     ]);
-
-    echo "<p style='color:green;'>✅ Database verbonden ($env)</p>";
-
 } catch (PDOException $e) {
-    die("<p style='color:red;'>❌ Database fout ($env): " . $e->getMessage() . "</p>");
+    die("DB fout ($env): " . $e->getMessage());
 }
