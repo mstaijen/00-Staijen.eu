@@ -5,109 +5,118 @@ require_once __DIR__ . '/../../includes/header.php';
 
 global $pdo;
 
-/*
-|--------------------------------------------------------------------------
-| Puzzels + eigenaar
-|--------------------------------------------------------------------------
-*/
+$slideLimit = 6;
 
-$sql = "
+/* SLIDESHOW */
+$stmt = $pdo->prepare("
     SELECT 
         p.*,
-        e.eigenaar AS eigenaar_naam
+        e.eigenaar AS eigenaar_naam,
+        eo.eigenaar AS uitgeleend_aan_naam
     FROM puzzels p
-    LEFT JOIN eigenaar e 
-        ON p.eigenaar_id = e.eigenaar_id
+    LEFT JOIN eigenaar e ON p.eigenaar_id = e.eigenaar_id
+    LEFT JOIN eigenaar eo ON p.uitgeleend_aan = eo.eigenaar_id
     ORDER BY p.id DESC
-";
+    LIMIT :limit
+");
+$stmt->bindValue(':limit', (int)$slideLimit, PDO::PARAM_INT);
+$stmt->execute();
+$slides = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$puzzels = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+/* ALLE PUZZELS */
+$allePuzzels = $pdo->query("
+    SELECT 
+        p.*,
+        e.eigenaar AS eigenaar_naam,
+        eo.eigenaar AS uitgeleend_aan_naam
+    FROM puzzels p
+    LEFT JOIN eigenaar e ON p.eigenaar_id = e.eigenaar_id
+    LEFT JOIN eigenaar eo ON p.uitgeleend_aan = eo.eigenaar_id
+    ORDER BY p.titel ASC
+")->fetchAll(PDO::FETCH_ASSOC);
 
-/*
-|--------------------------------------------------------------------------
-| Slideshow (laatste 5)
-|--------------------------------------------------------------------------
-*/
-
-$slides = array_slice($puzzels, 0, 5);
+function img($file)
+{
+    $base = BASE_URL . "/modules/puzzels/img/puzzels/";
+    return !empty($file) ? $base . htmlspecialchars($file) : $base . "no-image.png";
+}
 
 ?>
 
-<link rel="stylesheet" href="<?= BASE_URL ?>/modules/puzzels/puzzels.css">
+<link rel="stylesheet" href="<?= BASE_URL ?>/modules/puzzels/css/puzzels.css?v=9">
 
-<div class="container">
 
-    <h1>🧩 Puzzels</h1>
+<section class="slideshow-section">
 
-    <!-- SLIDESHOW -->
-    <div class="slideshow">
+    <div class="slider-wrapper">
+        <div class="slider-window">
+            <div class="slider-track" id="track">
 
-        <?php foreach ($slides as $i => $p): ?>
+                <?php foreach ($slides as $p): ?>
+                    <div class="slide">
 
-            <?php
-                $isUitgeleend = (int)$p['is_uitgeleend'] === 1;
-                $status = $isUitgeleend ? 'Uitgeleend' : 'Beschikbaar';
-                $kleur = $isUitgeleend ? '#d32f2f' : '#2e7d32';
-            ?>
+                        <img src="<?= img($p['afbeelding']) ?>">
 
-            <div class="slide <?= $i === 0 ? 'active' : '' ?>">
+                        <div class="slide-info">
+                            <h2><?= htmlspecialchars($p['titel'] ?? '') ?></h2>
 
-                <img src="<?= BASE_URL ?>/modules/puzzels/img/puzzels/<?= htmlspecialchars($p['afbeelding'] ?? 'no-image.png') ?>">
+                            <p>Eigenaar: <?= htmlspecialchars($p['eigenaar_naam'] ?? '') ?></p>
 
-                <div class="caption">
+                            <p>Status: <span class="status-tekst <?= $p['status'] ?>">
+                                <?= ucfirst($p['status']) ?>
+                            </span></p>
 
-                    <strong><?= htmlspecialchars($p['titel'] ?? '-') ?></strong><br>
+                            <?php if ($p['status'] === 'uitgeleend' && !empty($p['uitgeleend_aan_naam'])): ?>
+                                <p>Uitgeleend aan: <?= htmlspecialchars($p['uitgeleend_aan_naam']) ?></p>
+                            <?php endif; ?>
+                        </div>
 
-                    Eigenaar: <?= htmlspecialchars($p['eigenaar_naam'] ?? 'Onbekend') ?><br>
-
-                    <?php if (!empty($p['jaar'])): ?>
-                        Jaar: <?= htmlspecialchars($p['jaar']) ?><br>
-                    <?php endif; ?>
-
-                    <span style="color: <?= $kleur ?>; font-weight:bold;">
-                        Status: <?= $status ?>
-                    </span>
-
-                </div>
+                    </div>
+                <?php endforeach; ?>
 
             </div>
-
-        <?php endforeach; ?>
-
-        <button class="prev" onclick="moveSlide(-1)">‹</button>
-        <button class="next" onclick="moveSlide(1)">›</button>
-
+        </div>
     </div>
 
-    <!-- LIJST -->
-    <div class="puzzel-strip">
+</section>
 
-        <?php foreach ($puzzels as $p): ?>
 
-            <?php
-                $isUitgeleend = (int)$p['is_uitgeleend'] === 1;
-                $status = $isUitgeleend ? 'Uitgeleend' : 'Beschikbaar';
-                $kleur = $isUitgeleend ? '#d32f2f' : '#2e7d32';
-            ?>
+<main class="content">
+
+    <div class="puzzel-header">
+        <h3>Alle puzzels</h3>
+        <a class="btn-add" href="#">+ Toevoegen</a>
+    </div>
+
+    <div class="puzzel-grid">
+
+        <?php foreach ($allePuzzels as $p): ?>
 
             <div class="puzzel-card">
 
-                <img src="<?= BASE_URL ?>/modules/puzzels/img/puzzels/<?= htmlspecialchars($p['afbeelding'] ?? 'no-image.png') ?>">
+                <img src="<?= img($p['afbeelding']) ?>">
 
-                <div class="info">
+                <div class="puzzel-info">
 
-                    <div class="titel"><?= htmlspecialchars($p['titel'] ?? '-') ?></div>
+                    <h2><?= htmlspecialchars($p['titel'] ?? '') ?></h2>
 
-                    <div>Eigenaar: <?= htmlspecialchars($p['eigenaar_naam'] ?? 'Onbekend') ?></div>
+                    <p>Eigenaar: <?= htmlspecialchars($p['eigenaar_naam'] ?? '') ?></p>
 
-                    <?php if (!empty($p['jaar'])): ?>
-                        <div>Jaar: <?= htmlspecialchars($p['jaar']) ?></div>
+                    <p class="status-line">Status: 
+                        <span class="status-tekst <?= $p['status'] ?>">
+                            <?= ucfirst($p['status']) ?>
+                        </span>
+                    </p>
+
+                    <?php if ($p['status'] === 'uitgeleend' && !empty($p['uitgeleend_aan_naam'])): ?>
+                        <p>Uitgeleend aan:<?= htmlspecialchars($p['uitgeleend_aan_naam']) ?></p>
                     <?php endif; ?>
 
-                    <div class="status" style="color: <?= $kleur ?>;">
-                        <?= $status ?>
-                    </div>
+                </div>
 
+                <div class="card-buttons">
+                    <a class="btn-edit" href="#">Muteren</a>
+                    <a class="btn-delete" href="#">Verwijderen</a>
                 </div>
 
             </div>
@@ -116,26 +125,35 @@ $slides = array_slice($puzzels, 0, 5);
 
     </div>
 
-</div>
+</main>
+
 
 <script>
-let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
+const track = document.getElementById('track');
+const slides = document.querySelectorAll('.slide');
 
-function showSlide(i) {
-    if (i >= slides.length) currentSlide = 0;
-    if (i < 0) currentSlide = slides.length - 1;
+const visible = <?= (int)$slideLimit ?>;
+let index = 0;
 
-    slides.forEach(s => s.classList.remove("active"));
-    slides[currentSlide].classList.add("active");
+for (let i = 0; i < visible; i++) {
+    if (slides[i]) track.appendChild(slides[i].cloneNode(true));
 }
 
-function moveSlide(step) {
-    currentSlide += step;
-    showSlide(currentSlide);
+function move() {
+    index++;
+    const w = slides[0].offsetWidth;
+    track.style.transform = `translateX(-${index * w}px)`;
+
+    if (index >= slides.length) {
+        setTimeout(() => {
+            track.style.transition = "none";
+            index = 0;
+            track.style.transform = "translateX(0)";
+        }, 600);
+    }
 }
 
-showSlide(0);
+setInterval(move, 3000);
 </script>
 
 <?php require_once __DIR__ . '/../../includes/footer.php'; ?>
