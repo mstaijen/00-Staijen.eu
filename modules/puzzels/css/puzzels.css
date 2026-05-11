@@ -28,14 +28,12 @@ body {
     overflow: hidden;
 }
 
-/* track */
 .slider-track {
     display: flex;
     gap: 10px;
     transition: transform 0.6s ease;
 }
 
-/* 5 zichtbaar */
 .slide {
     flex: 0 0 calc(20% - 8px);
     border: 1px solid #eee;
@@ -44,13 +42,15 @@ body {
     text-align: center;
     background: #fff;
 }
-
+ 
 .slide img {
     width: 100%;
     height: 120px;
     object-fit: cover;
+    display: block;
+    margin: 0;
 }
-
+ 
 .slide-info {
     min-height: 70px;
 }
@@ -86,26 +86,34 @@ body {
     flex-direction: column;
 }
 
+/* afbeelding strak zonder extra ruimte */
 .puzzel-card img {
     width: 100%;
     height: 90px;
     object-fit: cover;
+ /*   display: block;
+    margin: 0; */
 }
 
-/* vaste info-ruimte (± 4 regels) */
+/* info blok (exact 4 regels ruimte) */
 .puzzel-info {
-    min-height: 92px;
+    min-height: 70px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
+    margin: 0;
+    padding: 0px 0 0 0;
 }
 
+/* titels */
 .puzzel-card h4,
 .puzzel-card h2 {
     margin: 2px 0;
     font-size: 12px;
 }
 
+/* tekst */
 .puzzel-card p {
     margin: 0;
     font-size: 12px;
@@ -117,16 +125,34 @@ body {
 .status-tekst.uitgeleend { color: #e74c3c; }
 .status-tekst.gelegd { color: #f39c12; }
 
+/* =========================
+   BUTTONS (direct onder info, strak)
+========================= */
+
+.card-buttons {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
 
 .btn-edit,
 .btn-delete {
     flex: 1;
+    text-align: center;
     font-size: 11px;
-    padding: 5px 0;
-    border-radius: 5px;
+    padding: 6px 0;
     color: #fff;
     text-decoration: none;
+    border-radius: 0;
+    margin: 0;
 }
 
-.btn-edit { background: #f39c12; }
-.btn-delete { background: #e74c3c; }
+.btn-edit {
+    background: #f39c12;
+}
+
+.btn-delete {
+    background: #e74c3c;
+}
