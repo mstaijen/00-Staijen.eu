@@ -8,7 +8,7 @@ body {
 }
 
 /* =========================
-   SLIDESHOW (50 / 35 VERHOUDING)
+   SLIDESHOW
 ========================= */
 
 .slideshow-section {
@@ -42,15 +42,15 @@ body {
     text-align: center;
     background: #fff;
 }
- 
+
 .slide img {
     width: 100%;
     height: 120px;
     object-fit: cover;
     display: block;
-    margin: 0;
+    cursor: pointer;
 }
- 
+
 .slide-info {
     min-height: 70px;
 }
@@ -67,12 +67,36 @@ body {
 }
 
 /* =========================
+   OVERZICHT HEADER
+========================= */
+
+.overzicht-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.overzicht-header h2 {
+    margin: 0;
+}
+
+.btn-toevoegen {
+    background: #3498db;
+    color: #fff;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* =========================
    OVERZICHT
 ========================= */
 
 .puzzel-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 6px;
 }
 
@@ -84,36 +108,35 @@ body {
 
     display: flex;
     flex-direction: column;
+    background: #fff;
 }
 
-/* afbeelding strak zonder extra ruimte */
 .puzzel-card img {
-    width: 100%;
-    height: 90px;
+    width: 90%;
+    height: 120px;
     object-fit: cover;
- /*   display: block;
-    margin: 0; */
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
 }
 
-/* info blok (exact 4 regels ruimte) */
+/* INFO */
 .puzzel-info {
     min-height: 70px;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 
     margin: 0;
-    padding: 0px 0 0 0;
+    padding: 0;
 }
 
-/* titels */
-.puzzel-card h4,
 .puzzel-card h2 {
     margin: 2px 0;
     font-size: 12px;
 }
 
-/* tekst */
 .puzzel-card p {
     margin: 0;
     font-size: 12px;
@@ -121,20 +144,26 @@ body {
 }
 
 /* STATUS */
-.status-tekst.beschikbaar { color: #2ecc71; }
-.status-tekst.uitgeleend { color: #e74c3c; }
-.status-tekst.gelegd { color: #f39c12; }
+.status-tekst.beschikbaar {
+    color: #2ecc71;
+}
+
+.status-tekst.uitgeleend {
+    color: #e74c3c;
+}
+
+.status-tekst.gelegd {
+    color: #f39c12;
+}
 
 /* =========================
-   BUTTONS (direct onder info, strak)
+   BUTTONS
 ========================= */
 
 .card-buttons {
     display: flex;
     width: 100%;
-    margin: 0;
-    padding: 0;
-    gap: 0;
+    margin-top: 0;
 }
 
 .btn-edit,
@@ -145,8 +174,6 @@ body {
     padding: 6px 0;
     color: #fff;
     text-decoration: none;
-    border-radius: 0;
-    margin: 0;
 }
 
 .btn-edit {
@@ -155,4 +182,39 @@ body {
 
 .btn-delete {
     background: #e74c3c;
+}
+
+/* =========================
+   POPUP
+========================= */
+
+.popup-overlay {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.85);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.popup-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.popup-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
 }
